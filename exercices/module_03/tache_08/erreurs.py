@@ -21,7 +21,7 @@ def calculer_prix_rabais(prix_initial, type_client):
 
     # ERREUR DE LOGIQUE N°1 :
     # Regardez la valeur de `rabais` et le résultat dans la fenêtre des variables
-    prix_final = prix_initial - rabais
+    prix_final = prix_initial * (1 - rabais)
     return prix_final
 
 
@@ -34,7 +34,7 @@ def calculer_points_accumules(nombre_achats, points_par_achat):
 
     # ERREUR DE LOGIQUE N°2 :
     # Observez le nombre de tours de boucle effectués dans le débogueur
-    for i in range(1, nombre_achats):
+    for i in range(nombre_achats):
         total_points += points_par_achat
 
     return total_points
@@ -50,8 +50,8 @@ def calculer_epargne_avec_bonus(montant_mensuel, nombre_mois):
 
     # ERREUR DE LOGIQUE N°3 & N°4 :
     # Inspectez `total` et `mois_actuel` à chaque tour de boucle
-    while mois_actuel < nombre_mois:
-        total = montant_mensuel + 5  # ERREUR N°3 : réécriture au lieu d'accumulation
+    while mois_actuel <= nombre_mois:
+        total += montant_mensuel + 5  # ERREUR N°3 : réécriture au lieu d'accumulation
         mois_actuel += 1              # ERREUR N°4 : condition d'arrêt (manque le dernier mois)
 
     return total
