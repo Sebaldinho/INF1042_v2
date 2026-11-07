@@ -16,6 +16,7 @@ while True:
         continue
 
     choix_ordinateur = random.choice(choix_possibles)
+    print(f"Vous : {choix_joueur}")
     print(f"Ordinateur : {choix_ordinateur}")
 
     if choix_joueur == choix_ordinateur:
@@ -34,3 +35,4 @@ print("\nRésultats")
 print(f"Victoires : {victoires}")
 print(f"Défaites : {defaites}")
 print(f"Parties nulles : {nulles}")
+print(f"Total de parties : {victoires + defaites + nulles}")

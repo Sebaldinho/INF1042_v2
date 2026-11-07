@@ -10,6 +10,7 @@ minutes = heures * minutes_par_heure
 secondes = minutes * secondes_par_minute
 
 print(f"Dans une année de {jours_par_annee} jours :")
+print(f"Jours : {jours_par_annee}")
 print(f"{heures} heures")
 print(f"{minutes} minutes")
 print(f"{secondes} secondes")

@@ -19,3 +19,8 @@ else:
         quantite = frequences[nombre - 1]
         pourcentage = quantite / nombre_tirages * 100
         print(f"{nombre} : {quantite} fois ({pourcentage:.2f} %)")
+    maximum = max(frequences)
+    nombres_les_plus_tires = [str(index + 1) for index, quantite in enumerate(frequences)
+                             if quantite == maximum]
+    print("Nombre(s) tiré(s) le plus souvent : " + ", ".join(nombres_les_plus_tires)
+          + f" ({maximum} fois)")
